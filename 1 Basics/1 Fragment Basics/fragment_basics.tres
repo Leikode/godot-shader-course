@@ -1,0 +1,28 @@
+[gd_resource type="VisualShader" format=3 uid="uid://dxkpbeoxv1rcu"]
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_ifdxg"]
+input_name = "time"
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_3eirv"]
+expanded_output_ports = [0]
+input_name = "color"
+
+[sub_resource type="VisualShaderNodeVectorCompose" id="VisualShaderNodeVectorCompose_fge3x"]
+output_port_for_preview = 0
+
+[sub_resource type="VisualShaderNodeClamp" id="VisualShaderNodeClamp_d432q"]
+output_port_for_preview = 0
+
+[resource]
+mode = 1
+flags/light_only = false
+nodes/fragment/0/position = Vector2(660, 100)
+nodes/fragment/4/node = SubResource("VisualShaderNodeInput_ifdxg")
+nodes/fragment/4/position = Vector2(-660, 580)
+nodes/fragment/5/node = SubResource("VisualShaderNodeInput_3eirv")
+nodes/fragment/5/position = Vector2(-520, 300)
+nodes/fragment/6/node = SubResource("VisualShaderNodeVectorCompose_fge3x")
+nodes/fragment/6/position = Vector2(360, 300)
+nodes/fragment/7/node = SubResource("VisualShaderNodeClamp_d432q")
+nodes/fragment/7/position = Vector2(-200, 540)
+nodes/fragment/connections = PackedInt32Array(5, 2, 6, 1, 5, 1, 6, 0, 4, 0, 7, 0, 7, 0, 6, 2, 6, 0, 0, 0)

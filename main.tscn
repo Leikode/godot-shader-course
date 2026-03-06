@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cyxhfe2thssch"]
+
+[ext_resource type="Shader" uid="uid://xh12hlbxcjfj" path="res://1 Basics/3 Textures/textures.tres" id="1_0xm2m"]
+[ext_resource type="Shader" uid="uid://blqe1fhvu506y" path="res://1 Basics/2 Fragment Color/fragment_color.tres" id="1_ig7tw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1bvp3"]
+shader = ExtResource("1_0xm2m")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lquwl"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0xm2m"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h2yge"]
+shader = ExtResource("1_ig7tw")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1bvp3"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[node name="Main" type="Node2D" unique_id=289237200]
+
+[node name="Textures" type="Sprite2D" parent="." unique_id=1244264054]
+material = SubResource("ShaderMaterial_1bvp3")
+position = Vector2(477, 312)
+texture = SubResource("CompressedTexture2D_lquwl")
+
+[node name="FragmentColor" type="Sprite2D" parent="." unique_id=875135710]
+visible = false
+position = Vector2(389, 306)
+texture = SubResource("CompressedTexture2D_0xm2m")
+
+[node name="FragmentBasics" type="Sprite2D" parent="." unique_id=841784419]
+visible = false
+material = SubResource("ShaderMaterial_h2yge")
+position = Vector2(722, 409)
+texture = SubResource("CompressedTexture2D_1bvp3")
