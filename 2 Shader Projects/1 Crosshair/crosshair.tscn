@@ -4,10 +4,13 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fqqwe"]
 shader = ExtResource("1_ongxl")
-shader_parameter/center_size = 0.2770000131575
-shader_parameter/crosshair_thickness = 0.066000003135
-shader_parameter/circle_distance = 0.3250000154375
-shader_parameter/cross_width = 0.198000009405
+shader_parameter/center_size = 0.37600001786
+shader_parameter/crosshair_thickness = 0.018000000855
+shader_parameter/circle_distance = 0.214000010165
+shader_parameter/cross_width = 0.0
+shader_parameter/lines_width = 0.0800000038
+shader_parameter/lines_length = 0.1270000060325
+shader_parameter/lines_offset = 0.1430000067925
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xnsjy"]
 load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
