@@ -2,6 +2,11 @@
 
 [ext_resource type="Shader" uid="uid://xh12hlbxcjfj" path="res://1 Basics/3 Textures/textures.tres" id="1_0xm2m"]
 [ext_resource type="Shader" uid="uid://blqe1fhvu506y" path="res://1 Basics/2 Fragment Color/fragment_color.tres" id="1_ig7tw"]
+[ext_resource type="Shader" uid="uid://b5whwpwfeshcq" path="res://1 Basics/4 Vertex/vertex.tres" id="3_h2yge"]
+[ext_resource type="Shader" uid="uid://bl6metu05bn0u" path="res://1 Basics/5 Variables/variables.tres" id="4_1bvp3"]
+[ext_resource type="Script" uid="uid://clxf0bcrsp15y" path="res://1 Basics/5 Variables/variables.gd" id="5_lquwl"]
+[ext_resource type="Shader" uid="uid://bbu48f4rw0jav" path="res://1 Basics/6 Code/code.gdshader" id="6_7mycd"]
+[ext_resource type="Shader" uid="uid://dpexfgbodhrem" path="res://1 Basics/7 Definition/definition.gdshader" id="7_272bh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1bvp3"]
 shader = ExtResource("1_0xm2m")
@@ -18,9 +23,36 @@ shader = ExtResource("1_ig7tw")
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1bvp3"]
 load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lquwl"]
+shader = ExtResource("3_h2yge")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7mycd"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7mycd"]
+shader = ExtResource("4_1bvp3")
+shader_parameter/IconXPos = 0.0
+shader_parameter/CircleRadius = 0.5
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h2yge"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_272bh"]
+shader = ExtResource("6_7mycd")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5vw27"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5vw27"]
+shader = ExtResource("7_272bh")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kek77"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
 [node name="Main" type="Node2D" unique_id=289237200]
 
 [node name="Textures" type="Sprite2D" parent="." unique_id=1244264054]
+visible = false
 material = SubResource("ShaderMaterial_1bvp3")
 position = Vector2(477, 312)
 texture = SubResource("CompressedTexture2D_lquwl")
@@ -35,3 +67,29 @@ visible = false
 material = SubResource("ShaderMaterial_h2yge")
 position = Vector2(722, 409)
 texture = SubResource("CompressedTexture2D_1bvp3")
+
+[node name="Vertex" type="Sprite2D" parent="." unique_id=929973385]
+visible = false
+material = SubResource("ShaderMaterial_lquwl")
+position = Vector2(218, 172)
+texture = SubResource("CompressedTexture2D_7mycd")
+
+[node name="Variables" type="Sprite2D" parent="." unique_id=1995482915]
+visible = false
+material = SubResource("ShaderMaterial_7mycd")
+position = Vector2(333, 303)
+texture = SubResource("CompressedTexture2D_h2yge")
+script = ExtResource("5_lquwl")
+
+[node name="Code" type="Sprite2D" parent="." unique_id=1177034207]
+visible = false
+material = SubResource("ShaderMaterial_272bh")
+position = Vector2(555, 316)
+texture = SubResource("CompressedTexture2D_5vw27")
+
+[node name="Definition" type="Sprite2D" parent="." unique_id=669869065]
+visible = false
+material = SubResource("ShaderMaterial_5vw27")
+position = Vector2(242, 409)
+scale = Vector2(2, 1)
+texture = SubResource("CompressedTexture2D_kek77")

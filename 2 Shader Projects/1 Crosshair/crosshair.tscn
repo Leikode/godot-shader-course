@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dwk6v5cmvvbp1"]
+
+[ext_resource type="Shader" uid="uid://dsr173tx7a0sl" path="res://2 Shader Projects/1 Crosshair/crosshair.gdshader" id="1_ongxl"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fqqwe"]
+shader = ExtResource("1_ongxl")
+shader_parameter/center_size = 0.2770000131575
+shader_parameter/crosshair_thickness = 0.066000003135
+shader_parameter/circle_distance = 0.3250000154375
+shader_parameter/cross_width = 0.198000009405
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xnsjy"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[node name="Crosshair" type="Node2D" unique_id=118235805]
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=7756817]
+material = SubResource("ShaderMaterial_fqqwe")
+position = Vector2(559, 234)
+texture = SubResource("CompressedTexture2D_xnsjy")
