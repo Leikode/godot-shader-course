@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bxj36tlewqx6h"]
+
+[ext_resource type="Shader" uid="uid://0sm5e3t6ky3b" path="res://2 Shader Projects/4 UV Control/uv_control.gdshader" id="1_38f28"]
+[ext_resource type="Texture2D" uid="uid://dwkx4li2gs0dt" path="res://icon.svg" id="1_dfj0q"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l8wfp"]
+shader = ExtResource("1_38f28")
+shader_parameter/x = 0.50000002375
+shader_parameter/y = 0.5
+
+[node name="UVControl" type="Node2D" unique_id=748023568]
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=934833997]
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_l8wfp")
+position = Vector2(507, 367)
+texture = ExtResource("1_dfj0q")

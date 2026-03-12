@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cybmt1m0lggd4"
-path="res://.godot/imported/bird.png-836429fa5ad1f269263a83ee8872cc7a.ctex"
+path="res://.godot/imported/bird.png-ea98908d3f27bc78ff55a489f044c808.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/2D shader assets/bird.png"
-dest_files=["res://.godot/imported/bird.png-836429fa5ad1f269263a83ee8872cc7a.ctex"]
+source_file="res://2 Shader Projects/3 Outline/bird.png"
+dest_files=["res://.godot/imported/bird.png-ea98908d3f27bc78ff55a489f044c808.ctex"]
 
 [params]
 
@@ -37,4 +37,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

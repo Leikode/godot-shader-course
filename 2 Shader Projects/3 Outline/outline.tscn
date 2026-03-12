@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://cal7k65ocoqui"]
+
+[ext_resource type="Texture2D" uid="uid://cybmt1m0lggd4" path="res://2 Shader Projects/3 Outline/bird.png" id="1_qjdc7"]
+[ext_resource type="Shader" uid="uid://bryxke75dyl52" path="res://2 Shader Projects/3 Outline/outline.gdshader" id="1_ypnbj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_33apq"]
+shader = ExtResource("1_ypnbj")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 0.5
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypnbj"]
+atlas = ExtResource("1_qjdc7")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_33apq"]
+atlas = ExtResource("1_qjdc7")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oqjtp"]
+atlas = ExtResource("1_qjdc7")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4kn4o"]
+atlas = ExtResource("1_qjdc7")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qsnrc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ypnbj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_33apq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oqjtp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4kn4o")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 5.0
+}]
+
+[node name="Outline" type="Node2D" unique_id=753429518]
+
+[node name="Bird" type="AnimatedSprite2D" parent="." unique_id=523594889]
+texture_filter = 1
+material = SubResource("ShaderMaterial_33apq")
+position = Vector2(488, 270)
+sprite_frames = SubResource("SpriteFrames_qsnrc")
+animation = &"fly"
