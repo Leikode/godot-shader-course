@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cy1sugrepe8ps"]
+
+[ext_resource type="Shader" uid="uid://u8k0ss40dxvw" path="res://3 Trigonometry/1 Waves/waves.gdshader" id="1_23l3u"]
+[ext_resource type="Texture2D" uid="uid://dwkx4li2gs0dt" path="res://icon.svg" id="2_xn5hp"]
+
+[sub_resource type="Curve" id="Curve_23l3u"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0.0035587177, 0.0044181347), 0.0, 0.0, 0, 0, Vector2(0.30604982, 0.73313785), 0.0, 0.0, 0, 0, Vector2(0.66903913, -0.3724339), 0.59514445, 0.59514445, 0, 0, Vector2(0.98932385, 0.008797646), -4.617503, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_23l3u"]
+curve = SubResource("Curve_23l3u")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_03m5t"]
+shader = ExtResource("1_23l3u")
+shader_parameter/scale_curve = SubResource("CurveTexture_23l3u")
+shader_parameter/speed = 0.30400001444
+
+[node name="Waves" type="Node2D" unique_id=235122075]
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=596922505]
+material = SubResource("ShaderMaterial_03m5t")
+position = Vector2(572, 221)
+texture = ExtResource("2_xn5hp")

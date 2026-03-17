@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://sn8k1wwn28um"]
+
+[ext_resource type="Shader" uid="uid://cvu4ngv08cml4" path="res://3 Trigonometry/2 Solar System/solar_system.gdshader" id="1_hd2d5"]
+[ext_resource type="Texture2D" uid="uid://dwkx4li2gs0dt" path="res://icon.svg" id="2_ktgb3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_v6ymg"]
+shader = ExtResource("1_hd2d5")
+shader_parameter/earth_radius = 0.20000000298023
+shader_parameter/earth_color = Color(1, 0.41686416, 0.18207192, 1)
+shader_parameter/moon_distance_to_earth = 0.43200001819093004
+shader_parameter/moon_radius = 0.05950000265162
+shader_parameter/moon_color = Color(0, 0.02755511, 0.98039216, 1)
+shader_parameter/micro_moon_distance_to_moon = 0.12600000388945
+shader_parameter/micro_moon_radius = 0.02450000098912
+shader_parameter/micro_moon_color = Color(0.6055465, 0.6049307, 0.6156863, 1)
+
+[node name="SolarSystem" type="Node2D" unique_id=141115678]
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=2132017073]
+material = SubResource("ShaderMaterial_v6ymg")
+position = Vector2(411, 176)
+texture = ExtResource("2_ktgb3")
