@@ -5,8 +5,9 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l8wfp"]
 shader = ExtResource("1_38f28")
-shader_parameter/x = 0.50000002375
+shader_parameter/x = 0.5
 shader_parameter/y = 0.5
+shader_parameter/pixel_magnitude = 64.0
 
 [node name="UVControl" type="Node2D" unique_id=748023568]
 
