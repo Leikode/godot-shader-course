@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://3kjitvh4id8r"]
+
+[ext_resource type="Shader" uid="uid://c1mvajvbi6g6x" path="res://3 Trigonometry/3 Shine/shine.gdshader" id="1_3ntws"]
+[ext_resource type="Texture2D" uid="uid://dwkx4li2gs0dt" path="res://icon.svg" id="1_85dvy"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t1p4r"]
+shader = ExtResource("1_3ntws")
+shader_parameter/slope_angle = 315.0000149625
+shader_parameter/thickness = 0.10400000494
+
+[node name="Shine" type="Node2D" unique_id=173810367]
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1316669185]
+material = SubResource("ShaderMaterial_t1p4r")
+position = Vector2(547, 143)
+texture = ExtResource("1_85dvy")
