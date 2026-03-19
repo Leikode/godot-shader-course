@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://c8vtnc8xe8agq"]
+
+[ext_resource type="Shader" uid="uid://b480xpu21vts0" path="res://4 World Coordinates/1 Vertex/world_coordinates.gdshader" id="1_aesva"]
+[ext_resource type="Texture2D" uid="uid://dwkx4li2gs0dt" path="res://icon.svg" id="2_51m8c"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hfamn"]
+shader = ExtResource("1_aesva")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_5glrw"]
+size = Vector2(128, -128)
+subdivide_width = 100
+subdivide_depth = 100
+orientation = 2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_aesva"]
+shader = ExtResource("1_aesva")
+
+[node name="WorldCoordinates" type="Node2D" unique_id=1681164832]
+
+[node name="Icon" type="MeshInstance2D" parent="." unique_id=1771996440]
+material = SubResource("ShaderMaterial_hfamn")
+position = Vector2(385, 249)
+mesh = SubResource("PlaneMesh_5glrw")
+texture = ExtResource("2_51m8c")
+
+[node name="Icon2" type="Polygon2D" parent="." unique_id=2019452789]
+material = SubResource("ShaderMaterial_aesva")
+position = Vector2(719, 288)
+texture = ExtResource("2_51m8c")
+polygon = PackedVector2Array(8.849304, 8.204979, 114.38199, 7.767084, 118.36188, 119.21361, 16.05368, 91.74566)
+uv = PackedVector2Array(8.849304, 8.204979, 114.38199, 7.767084, 118.36188, 119.21361, 16.05368, 91.74566)

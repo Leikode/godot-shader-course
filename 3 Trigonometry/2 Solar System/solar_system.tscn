@@ -7,7 +7,7 @@
 shader = ExtResource("1_hd2d5")
 shader_parameter/earth_radius = 0.20000000298023
 shader_parameter/earth_color = Color(1, 0.41686416, 0.18207192, 1)
-shader_parameter/moon_distance_to_earth = 0.43200001819093004
+shader_parameter/moon_distance_to_earth = 0.4320000181909301
 shader_parameter/moon_radius = 0.05950000265162
 shader_parameter/moon_color = Color(0, 0.02755511, 0.98039216, 1)
 shader_parameter/micro_moon_distance_to_moon = 0.12600000388945
