@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bsj4k4q2dsgew"]
+
+[ext_resource type="Shader" uid="uid://bp33n2t7wy5mr" path="res://4 World Coordinates/3 Matrix Basics/matrix_basics.gdshader" id="1_wxdck"]
+[ext_resource type="Texture2D" uid="uid://dwkx4li2gs0dt" path="res://icon.svg" id="2_5ivuq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0t1yf"]
+shader = ExtResource("1_wxdck")
+shader_parameter/x_offset = 50.0
+shader_parameter/y_offset = 50.0
+shader_parameter/scale_ratio = 2.5
+shader_parameter/angle_z = 51.4290024428775
+shader_parameter/angle_y = 295.4430140335425
+shader_parameter/angle_x = 185.190008796525
+
+[node name="MatrixBasics" type="Node2D" unique_id=2067766964]
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1745956606]
+material = SubResource("ShaderMaterial_0t1yf")
+position = Vector2(462, 161)
+texture = ExtResource("2_5ivuq")
