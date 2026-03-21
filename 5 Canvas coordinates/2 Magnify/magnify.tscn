@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://biqtof74s2ryq"]
+
+[ext_resource type="Texture2D" uid="uid://b7r4hbr3fetu3" path="res://5 Canvas coordinates/2 Magnify/map.png" id="1_rbrsb"]
+[ext_resource type="Texture2D" uid="uid://cqmj0wwwhqw4b" path="res://icon.svg" id="2_ca4kj"]
+
+[node name="Magnify" type="Node2D"]
+
+[node name="Map" type="Sprite2D" parent="."]
+texture = ExtResource("1_rbrsb")
+centered = false
+
+[node name="Glass" type="Sprite2D" parent="."]
+position = Vector2(314, 680)
+texture = ExtResource("2_ca4kj")

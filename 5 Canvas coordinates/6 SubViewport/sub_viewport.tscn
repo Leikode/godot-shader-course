@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://cestpbpjiqgr2"]
+
+[ext_resource type="Shader" uid="uid://dv6tb034f5wdu" path="res://5 Canvas coordinates/6 SubViewport/sub_viewport_inner.gdshader" id="1_in7jq"]
+[ext_resource type="Texture2D" uid="uid://dwkx4li2gs0dt" path="res://icon.svg" id="2_dvh2i"]
+[ext_resource type="Shader" uid="uid://djtnu11v3iwib" path="res://5 Canvas coordinates/6 SubViewport/sub_viewport_outer.gdshader" id="3_dvh2i"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fufq0"]
+shader = ExtResource("1_in7jq")
+shader_parameter/angle_z = 180.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dvh2i"]
+shader = ExtResource("3_dvh2i")
+shader_parameter/line_count = 7.3630003497425
+shader_parameter/line_width = 0.450000021375
+shader_parameter/speed = 0.3
+shader_parameter/pixel_magnitude = 64.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_fufq0"]
+size = Vector2(256, -256)
+subdivide_width = 100
+subdivide_depth = 100
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ih8gw"]
+viewport_path = NodePath("SubViewport")
+
+[node name="SubViewport" type="Node2D" unique_id=1842305804]
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=262740858]
+transparent_bg = true
+size = Vector2i(256, 256)
+
+[node name="Sprite2D" type="Sprite2D" parent="SubViewport" unique_id=647888264]
+material = SubResource("ShaderMaterial_fufq0")
+position = Vector2(64, 64)
+texture = ExtResource("2_dvh2i")
+
+[node name="Sprite2D2" type="Sprite2D" parent="SubViewport" unique_id=1561360894]
+position = Vector2(128, 128)
+texture = ExtResource("2_dvh2i")
+centered = false
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=57557057]
+material = SubResource("ShaderMaterial_dvh2i")
+mesh = SubResource("QuadMesh_fufq0")
+texture = SubResource("ViewportTexture_ih8gw")

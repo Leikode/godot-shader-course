@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://dt73r3nu03tul"]
+
+[ext_resource type="Texture2D" uid="uid://yqvfjf6fjemo" path="res://5 Canvas coordinates/3 TV/icon_large.png" id="1_24os2"]
+[ext_resource type="Shader" uid="uid://onjpwudsyrkc" path="res://5 Canvas coordinates/3 TV/tv.gdshader" id="2_l044h"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6114c"]
+shader = ExtResource("2_l044h")
+shader_parameter/warp_amount = 0.1890000089775
+shader_parameter/scanline_count = 2000.0
+shader_parameter/scanline_opacity = 0.090000004275
+shader_parameter/scanline_speed = 10.0
+shader_parameter/vignette_strength = 0.050000002375
+
+[node name="TV" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer"]
+layout_mode = 2
+texture = ExtResource("1_24os2")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_6114c")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
